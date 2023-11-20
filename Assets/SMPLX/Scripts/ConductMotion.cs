@@ -342,15 +342,6 @@ public class ConductMotion : MonoBehaviour
 		GroundtruthLoad("Assets/CSVs/sensingdata_gt_test.csv");
 		Debug.Log("timingGT.Count() " + timingGT.Count + "    "+ _Conduct_annotation.Length);
 
-		/*
-		for(int a=0; a<timingGT.Count; a++)
-        {
-			for(int b=0; b<timingGT[a].Count; b++)
-            {
-				Debug.Log( a + " :  " + _Conduct_annotation[b] + "    " + timingGT[a][b]);
-			}
-        }
-		*/
 
 		ConductingTrajectoriesLoad("Assets/CSVs/4Beat.csv");
 		Debug.Log("Load File : " + pattern_4_4.Count);
