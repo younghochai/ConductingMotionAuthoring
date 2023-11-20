@@ -50,12 +50,10 @@ public class CSVPlayer : MonoBehaviour
 
         using (System.IO.StreamWriter file = new System.IO.StreamWriter(file_path))
         {
-            
-
+           
             Debug.Log("save test frm cnt : " + save_quat_list.Count);
             for (int frame = 0; frame < save_quat_list.Count; frame++)
             {
-
                 var builder = new StringBuilder();
 
                 for (int joint = 0; joint < save_quat_list[frame].Count; joint++)
@@ -68,15 +66,7 @@ public class CSVPlayer : MonoBehaviour
                     else
                         builder.Append(save_quat_list[frame][joint].z.ToString() + ',');
 
-                    //builder.Append(save_euler_list[frame][joint].x.ToString() + ',');
-                    //builder.Append(save_euler_list[frame][joint].y.ToString() + ',');
-                    //if (joint == save_euler_list[frame].Count - 1)
-                    //    builder.Append(save_euler_list[frame][joint].z.ToString());
-                    //else
-                    //    builder.Append(save_euler_list[frame][joint].z.ToString() + ',');
-
                 }
-                //builder.Append(save_class_list[frame].ToString() + ',');
                 file.WriteLine(builder.ToString());
 
                 builder.Clear();
@@ -95,7 +85,8 @@ public class CSVPlayer : MonoBehaviour
         
         _Animation();
 
-
+        
+        ////// Conducting Senesing Data Load 
         if (Input.GetKeyDown(KeyCode.U))
         {
             fileNumCount++;
@@ -104,14 +95,14 @@ public class CSVPlayer : MonoBehaviour
             if (fileMax < fileNumCount)
                 fileNumCount = 1;
 
-
             fileRead();
 
 
         }
 
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if(save_quat_list.Count >0 && isSaved ==false)
             {
@@ -129,7 +120,6 @@ public class CSVPlayer : MonoBehaviour
             //    Debug.Log("**keys****  "+Key);
             //    keyValue = Key;
             //}
-
             //Debug.Log(SMPLX.JointMatrices.Values.Count);
             //Debug.Log(SMPLX.JointMatrices.Keys.Count);
 
@@ -190,6 +180,8 @@ public class CSVPlayer : MonoBehaviour
             smpl_module.UpdateJointPositions(false);
 
 
+
+            ///////////////////////////////////////////////////////first Image / Last Image saved Part
             //if(frame_cnt==1)
             //{
             //    string imgSavePath = "";
