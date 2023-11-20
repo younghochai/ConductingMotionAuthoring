@@ -103,7 +103,6 @@ public class ConductMotion : MonoBehaviour
 	public List<List<Quaternion>> decrescendo_data = new List<List<Quaternion>>();
 	public List<List<Quaternion>> crescendo_data = new List<List<Quaternion>>();
 
-	//cres
 
 	void left_Hand_Data_Load_cres(string file_path)
 	{
@@ -234,11 +233,6 @@ public class ConductMotion : MonoBehaviour
 	}
 
 
-
-
-
-
-
 	void timingGtLoad(string file_path)
     {
 		timing = new List<int>();
@@ -358,8 +352,8 @@ public class ConductMotion : MonoBehaviour
         }
 		*/
 
-		ConductingTrajectoriesLoad("Assets/CSVs/3Beat.csv");
-		Debug.Log("4_4_norm.Count() " + pattern_4_4.Count);
+		ConductingTrajectoriesLoad("Assets/CSVs/4Beat.csv");
+		Debug.Log("Load File : " + pattern_4_4.Count);
 	}
 
 	void _Animation()
