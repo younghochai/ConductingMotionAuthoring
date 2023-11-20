@@ -190,24 +190,24 @@ public class CSVPlayer : MonoBehaviour
             smpl_module.UpdateJointPositions(false);
 
 
-            if(frame_cnt==1)
-            {
-                string imgSavePath = "";
-                imgSavePath += save_prefix;
-                imgSavePath += "smpl_";
-                imgSavePath += fileNumCount.ToString("000");
-                imgSavePath += "_1.png";
-                ScreenCapture.CaptureScreenshot(imgSavePath);
-            }
-            else if (frame_cnt== load_quat_list[0][0].Count-1)
-            {
-                string imgSavePath = "";
-                imgSavePath += save_prefix;
-                imgSavePath += "smpl_";
-                imgSavePath += fileNumCount.ToString("000");
-                imgSavePath += "_2.png";
-                ScreenCapture.CaptureScreenshot(imgSavePath);
-            }
+            //if(frame_cnt==1)
+            //{
+            //    string imgSavePath = "";
+            //    imgSavePath += save_prefix;
+            //    imgSavePath += "smpl_";
+            //    imgSavePath += fileNumCount.ToString("000");
+            //    imgSavePath += "_1.png";
+            //    ScreenCapture.CaptureScreenshot(imgSavePath);
+            //}
+            //else if (frame_cnt== load_quat_list[0][0].Count-1)
+            //{
+            //    string imgSavePath = "";
+            //    imgSavePath += save_prefix;
+            //    imgSavePath += "smpl_";
+            //    imgSavePath += fileNumCount.ToString("000");
+            //    imgSavePath += "_2.png";
+            //    ScreenCapture.CaptureScreenshot(imgSavePath);
+            //}
 
             
 
