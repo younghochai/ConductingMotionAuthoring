@@ -20,10 +20,7 @@ public class CSVPlayer : MonoBehaviour
     public List<List<Vector3>> save_euler_list = new List<List<Vector3>>();
 
 
-    int startIdx = 0;
-    int endIdx = 4284;
-    bool isSaved = false;
-
+    ////////////////////////////FIle Read Count 
     int fileNumCount = 0;
     int fileMax = 4;
 
@@ -101,15 +98,6 @@ public class CSVPlayer : MonoBehaviour
         }
 
 
-            
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            if(save_quat_list.Count >0 && isSaved ==false)
-            {
-                write_csv_file("");
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             video.Play();
@@ -122,9 +110,8 @@ public class CSVPlayer : MonoBehaviour
             //}
             //Debug.Log(SMPLX.JointMatrices.Values.Count);
             //Debug.Log(SMPLX.JointMatrices.Keys.Count);
-
-           
         }
+
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -201,14 +188,6 @@ public class CSVPlayer : MonoBehaviour
             //    ScreenCapture.CaptureScreenshot(imgSavePath);
             //}
 
-            
-
-
-            if (frame_cnt == startIdx)
-                isSaved = true;
-
-            if (frame_cnt == endIdx)
-                isSaved = false;
 
             List<Quaternion> tempQaut = new List<Quaternion>();
             List<Vector3> tempEuler = new List<Vector3>();
